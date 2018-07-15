@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+    layout:decorate="~{layout/base}">
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <section layout:fragment="content">
+        <h2 th:text="${welcome}"></h2>
+        <h3>Hello WORLD!</h3>
+        <script type="text/javascript" th:src="@{/static.js}"></script>
+        <div th:text="${fileExist}"></div>
+        <div th:text="${filePath}"></div>
+        <div th:text="${scFileExist}"></div>
+        <div th:text="${scFilePath}"></div>
+        <div th:text="${rsFileExist}"></div>
+        <div th:text="${rsFilePath}"></div>
+        
+        <div th:replace="index_assets :: scripts"></div>
+        
+    </section>
+    <!--
+    
+    -->
+</body>
+</html>
